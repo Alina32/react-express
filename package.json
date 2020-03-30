@@ -19,7 +19,7 @@
     "mongod": "^2.0.0",
     "mongodb-tools": "^1.0.6",
     "mongoimport": "^1.0.6",
-    "mongoose": "^5.6.7",
+    "mongoose": "^5.7.5",
     "next": "^9.3.1",
     "nookies": "^2.0.8",
     "nprogress": "^0.2.0",
