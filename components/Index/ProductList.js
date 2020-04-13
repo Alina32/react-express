@@ -13,8 +13,8 @@ function ProductList({ products }) {
 		}));
 	}
 
-  //return <Card.Group itemsPerRow="3" centered items={mapProductsToitems(products)} />
-  return <Card.Group itemsPerRow="3" content={1} />
+  return <Card.Group itemsPerRow="3" centered items={1} />
+
 }
 
 export default ProductList;

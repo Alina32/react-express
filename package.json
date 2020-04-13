@@ -25,9 +25,12 @@
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-slick": "^0.25.2",
+    "react-slick-slider": "^0.15.10",
     "react-stripe-checkout": "^2.6.3",
     "semantic-ui-react": "^0.87.3",
     "shortid": "^2.2.14",
+    "slick-carousel": "^1.8.1",
     "stripe": "^7.5.0",
     "uuid": "^3.3.2",
     "validator": "^11.1.0"

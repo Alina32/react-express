@@ -1,4 +1,4 @@
-import { Menu, Container, Image, Icon } from 'semantic-ui-react';
+import { Menu, Container,Image, Icon, Input } from 'semantic-ui-react';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import NProgress from 'nprogress'
@@ -9,88 +9,36 @@ Router.onRouteChangeError = () => NProgress.done();
 
 function Header() {
 	const router = useRouter();
- 	const user = true;	
+ 	const user = false;	
 
  	function isActive(route) {
  		return route === router.pathname;
  	}
 
   	return (
-	  <Menu fluid id="menu" inverted>
-	  	<Container text>
-	  		<Link href="/">
-	  			<Menu.Item header active={isActive('/')}>
-	  				<Image
-	  					size="mini"
-	  					src="/static/logo.svg"
-	  					style={{ marginRght: '1em' }}
-	  				/>
-	  				ReactReserve
-	  			</Menu.Item>
-	  		</Link>
+	 	<Menu stackable borderless id="menu" inverted>
+		 		<Link href="/">
+		 			<Menu.Item>
+		 			         <div className="logo"/>
+		 			</Menu.Item>
+		 		</Link>
 
-	  		<Link href="/cart">
-	  			<Menu.Item header active={isActive('/cart')}>
-	  				<Icon
-	  					name="cart"
-	  					size="large"
-	  				/>
-	  				Cart
-	  			</Menu.Item>
-	  		</Link>
-
-	  		{user && <Link href="/create">
-	  			<Menu.Item header active={isActive('/create')}>
-	  				<Icon
-	  					name="add square"
-	  					size="large"
-	  				/>
-	  				Create
-	  			</Menu.Item>
-	  		</Link>}
-	  		{user ? (<>
-		  		<Link href="/account">
-		  			<Menu.Item header active={isActive('/account')}>
-		  				<Icon
-		  					name="user"
-		  					size="large"
-		  				/>
-		  				Account
-		  			</Menu.Item>
-		  		</Link>
-
-	  			<Menu.Item header>
-	  				<Icon
-	  					name="sign out"
-	  					size="large"
-	  				/>
-	  				Logout
-	  			</Menu.Item>
-			</>)
-			:
-			(<>
-		  		<Link href="/login">
-		  			<Menu.Item header active={isActive('/login')}>
-		  				<Icon
-		  					name="sign in"
-		  					size="large"
-		  				/>
-		  				Login
-		  			</Menu.Item>
-		  		</Link>
-
-		  		<Link href="/signup">
-		  			<Menu.Item header active={isActive('/signup')}>
-		  				<Icon
-		  					name="signup"
-		  					size="large"
-		  				/>
-		  				Signup
-		  			</Menu.Item>
-		  		</Link>
-		  	</>)}
-	  	</Container>
-	  </Menu>
+		 		<Link href="/">
+		 			<Menu.Item  name='ГЛАВНАЯ' active={isActive('/')}></Menu.Item>
+		 		</Link>
+		 		
+		 		<Link href="hotels">
+		 			<Menu.Item  name='ОТЕЛИ' active={isActive('/hotels')}></Menu.Item>
+		 		</Link>
+		 		
+		 		<Link href="login">
+		 			  	<Menu.Item  name='ВОЙТИ' active={isActive('/login')}></Menu.Item>
+		 			</Link>
+		 			
+		 			  <Menu.Item position='right'>
+		 			    <Input icon='search' placeholder='город или отель...' />
+		 			  </Menu.Item>			 			
+		</Menu>
 	)
 }
 

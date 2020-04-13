@@ -52,7 +52,7 @@ export default () => (
       href="/static/favicon/safari-pinned-tab.svg"
       color="#0041df"
     />
-    <meta name="msapplication-TileColor" content="#00df94" />
+    <meta name="msapplication-TileColor" content="#0000" />
     <meta name="theme-color" content="#00df94" />
   </>
 );
