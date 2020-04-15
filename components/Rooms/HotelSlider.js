@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { Item, Rating, Header, Container, Segment } from 'semantic-ui-react';
 
 
-export default class HotelSlid extends Component {
+export default class HotelSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
