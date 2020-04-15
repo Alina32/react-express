@@ -12,7 +12,7 @@ export default class Hotelspage extends Component {
     <>	
 	    <Container style={{ width: '1200px' }}>
 		 <SideBar />
-		 </Container>    
+		</Container>    
 		 <Footer />
 	</>	
     );

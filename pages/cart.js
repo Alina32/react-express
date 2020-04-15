@@ -1,5 +1,7 @@
+import PhotoDimmer from '../components/Rooms/PhotoDimmer';
+
 function Cart() {
-  return <>cart</>;
+  return <PhotoDimmer />;
 }
 
 export default Cart;

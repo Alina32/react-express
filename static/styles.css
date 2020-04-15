@@ -10,6 +10,22 @@ body{
 	background: var(--bodyBg);
 }
 
+
+.image-fl img{
+    width: 100%; 
+    height: 400px;
+}
+
+.image-pw img{
+    width: 100%; 
+    height: 80px;
+}
+
+.fl, .pw{
+    border:1px solid #ddd; 
+}
+
+
 #menu {
 	border-radius: 0;
 	background:  var(--menuBg);

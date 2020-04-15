@@ -11,7 +11,11 @@ export default class RoomsPage extends Component {
  
     return (
     <>	
+    
      <Container style={{ width: '800px' }}> 
+     
+        <HotelSlider />
+       
         <Rooms />
 	   </Container>    
 		 <Footer />

@@ -1,72 +1,86 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Item, Rating, Header, Container, Segment } from 'semantic-ui-react';
 
-export default class Responsive extends Component {
-  render() {
-    var settings = {
-      dots: true,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 4,
-      initialSlide: 0,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+
+export default class HotelSlider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nav1: null,
+      nav2: null
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      nav1: this.slider1,
+      nav2: this.slider2
+    });
+  }
+
+  render() {
     return (
-      <div>
-        <h2> Responsive </h2>
-        <Slider {...settings}>
-          <div>
-            <img src="https://q-cf.bstatic.com/images/hotel/max1024x768/206/206744855.jpg" alt=""/>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
+    <Segment style={{borderRadius:'0px', width:'800px', paddingLeft:'100px', paddingRight:'100px'}}>
+      <Item.Header as='h1'>Radisson Blue
+        <Rating defaultRating={4} maxRating={4} disabled />
+      </Item.Header>
+      <div className="full">
+        <Slider
+          asNavFor={this.state.nav2}
+          ref={slider => (this.slider1 = slider)}
+        >
+          <div className="fl">
+                    <div className="image-fl"><img src="http://i.piccy.info/i9/8acef96c994f930ebd4f4203cb392822/1586587352/565820/1372283/radisson.jpg" alt=""/></div>
+                  </div>
+
+                  <div className="fl">
+                    <div className="image-fl"><img src="https://radisson-blu-kiev.kievhotel.net/data/Photos/r1920x1080/9693/969302/969302848.JPEG" alt=""/></div>
+                  </div>
+
+                  <div className="fl">
+                    <div className="image-fl"><img src="https://hotels.anywayanyday.com/hotelimages_new/c8/39/29/3da927/31BE3D_6213_z.jpg" alt=""/></div>
+                  </div>
+
+                  <div className="fl">
+                    <div className="image-fl"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/fb/ca/1c/radisson-blu-hotel-kyiv.jpg" alt=""/></div>
+                  </div>
+
+                  <div className="fl">
+                    <div className="image-fl"><img src="https://www.green-tour.com.ua/userfiles/catalog/5422d70f3f5a7.jpg" alt=""/></div>
+                  </div>
         </Slider>
-      </div>
+        </div>
+        <div className="preview">
+        <Slider
+          asNavFor={this.state.nav1}
+          ref={slider => (this.slider2 = slider)}
+          slidesToShow={5}
+          swipeToSlide={true}
+          focusOnSelect={true}
+        >
+         <div className="pw">
+                  <div className="image-pw"><img src="http://i.piccy.info/i9/8acef96c994f930ebd4f4203cb392822/1586587352/565820/1372283/radisson.jpg" alt=""/></div>
+                </div>
+
+                <div className="pw">
+                  <div className="image-pw"><img src="https://radisson-blu-kiev.kievhotel.net/data/Photos/r1920x1080/9693/969302/969302848.JPEG" alt=""/></div>
+                </div>
+
+                <div className="pw">
+                  <div className="image-pw"><img src="https://hotels.anywayanyday.com/hotelimages_new/c8/39/29/3da927/31BE3D_6213_z.jpg" alt=""/></div>
+                </div>
+
+                <div className="pw">
+                  <div className="image-pw"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/fb/ca/1c/radisson-blu-hotel-kyiv.jpg" alt=""/></div>
+                </div>
+
+                <div className="pw">
+                  <div className="image-pw"><img src="https://www.green-tour.com.ua/userfiles/catalog/5422d70f3f5a7.jpg" alt=""/></div>
+                </div>
+        </Slider>
+        </div>
+      </Segment>
     );
   }
 }
