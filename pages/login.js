@@ -40,7 +40,7 @@ function Login() {
 
   return <>
    <Container  style={{ width: '450px' }}>
-  	<Message 
+  	<Message style={{borderRadius:'0px'}}
   		attached
   		icon="privacy"
   		header="Welcome Back!"
@@ -80,12 +80,12 @@ function Login() {
   				disabled={disabled || loading}
   				icon="sign in"
   				type="submit"
-  				color="orange"
+  				color="instagram"
   				content="Login"
   			/>
   	</Form>
   	</Form>	
-  	<Message attached="bottom" warning>
+  	<Message attached="bottom" warning style={{borderRadius:'0px'}}>
   		New user<Icon name="help"/>{""}
   		<Link href="/signup">
   			<a>Sign up here</a>

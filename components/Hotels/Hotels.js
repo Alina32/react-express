@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
+import Router, { useRouter } from 'next/router';
 import { Container, Button, Icon, Image, Item, Label, Popup, Statistic, Rating } from 'semantic-ui-react';
 
 export default class Hotels extends Component {
@@ -32,10 +34,11 @@ export default class Hotels extends Component {
 		                <Popup content='Автостоянка' trigger={<Button size='mini' size='mini' icon='car' />} />
 		                <Popup content='Ресторан' trigger={<Button size='mini' icon='food' />} />
 		            </Item.Extra>
-
-		            <Button color='brown' floated='right'>
-		                Забронировать <Icon name='right chevron' />
-		            </Button>
+					<Link href="rooms">
+			            <Button color='brown' floated='right'>
+			                Забронировать <Icon name='right chevron' />
+			            </Button>
+			         </Link>   
 
 	        	</Item.Content>
 	    	</Item>

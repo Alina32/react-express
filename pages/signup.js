@@ -47,7 +47,7 @@ function Signup() {
 
   return <>
    <Container  style={{ width: '450px' }}>
-  	<Message 
+  	<Message style={{borderRadius:'0px'}}
   		attached
   		icon="settings"
   		header="Get Started!"
@@ -98,12 +98,12 @@ function Signup() {
   				disabled={disabled || loading}
   				icon="signup"
   				type="submit"
-  				color="orange"
+  				color="instagram"
   				content="Signup"
   			/>  
   	</Form>
   	</Form>		
-  	<Message attached="bottom" warning>
+  	<Message attached="bottom" warning style={{borderRadius:'0px'}}>
   		Existing user<Icon name="help"/>{""}
   		<Link href="/login">
   			<a>Log in here</a>

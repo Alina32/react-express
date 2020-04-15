@@ -22,7 +22,7 @@ const VerticalSidebar = ({ animation, direction, visible}) => (
     visible={visible}
     style={{ width: '200px' }}
   >
-        <Item.Group  >
+        <Item.Group>
             <Item>
             	<Item.Content>
             		<Header as='h3'color='brown' block style={{ width: '100%', border:'none', borderRadius: '0px' }}>Цена за ночь</Header>
@@ -125,7 +125,7 @@ export default class SidebarTransitions extends Component {
         	<Button style={{ borderRadius: '0px',padding: '0px', height: '40px', width: '200px'}}onClick={this.handleAnimationChange('push')}>{button}</Button>
         </Responsive>
         
-        <Sidebar.Pushable as={Segment}>
+        <Sidebar.Pushable as={Segment} style={{borderRadius:'0px'}}> 
           {vertical ? (
             <HorizontalSidebar
               animation={animation}
