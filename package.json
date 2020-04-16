@@ -8,6 +8,10 @@
     "start": "next start",
     "build": "next build"
   },
+  "proxy": "http://localhost:5000",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
